@@ -23,4 +23,10 @@ class Wizard(val name: String, var mana: Int, var spellPower: Int) {
     fun restoreMana(amount: Int) {
         mana = minOf(100, mana + amount)
     }
+    fun removeMana(amount: Int) {
+        mana = maxOf(0, mana - amount)
+    }
+    fun train() {
+        return false
+    }
 }
