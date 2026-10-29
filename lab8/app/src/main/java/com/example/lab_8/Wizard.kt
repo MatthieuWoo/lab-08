@@ -27,6 +27,9 @@ class Wizard(val name: String, var mana: Int, var spellPower: Int) {
         mana = maxOf(0, mana - amount)
     }
     fun train() {
-        return
+        if (mana >= 5) {
+            mana -= 5
+            spellPower += 1
+        }
     }
 }
